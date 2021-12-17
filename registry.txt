@@ -1,3 +1,6 @@
+mkdir cert
+mkdir registry
+
 openssl req -newkey rsa:2048 -nodes -sha256 -keyout /mnt/nfs/cert/domain.key \
 -x509 -addext "subjectAltName = DNS:registry.pps.local" -days 3650 -out /mnt/nfs/cert/domain.crt \
 -subj "/C=ES/ST=Spain/L=Zaragoza/O=PPS SL/OU=IT Deprtment/CN=*.pps.local"
